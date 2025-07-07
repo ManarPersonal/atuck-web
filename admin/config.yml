@@ -1,0 +1,15 @@
+backend:
+  name: github
+  repo: ManarPersonal/atuck-web  # Asegúrate de que esté bien escrito tu usuario y repositorio
+
+media_folder: "imagenes/uploads"  # Carpeta donde se guardarán imágenes subidas desde el CMS
+public_folder: "/imagenes/uploads"
+
+collections:
+  - name: "lanzamientos"
+    label: "Lanzamientos"
+    folder: ""
+    create: false
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
