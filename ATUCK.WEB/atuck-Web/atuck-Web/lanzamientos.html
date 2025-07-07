@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATUCK - Lanzamientos musicales</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Fondo de la sección main con degradado oscuro azulado */
+    main {
+      background: linear-gradient(135deg, #001f3f, #004466);
+      padding: 2rem 1rem 4rem;
+      min-height: 100vh;
+      box-sizing: border-box;
+      color: #d0e9ff;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    main h2 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #00eaff;
+      text-shadow: 0 0 8px #00eaffaa;
+    }
+
+    main p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #a0cfff;
+      text-shadow: 0 0 4px #004466bb;
+    }
+
+    .galeria-lanzamientos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .item-lanzamiento {
+      flex: 1 1 calc(25% - 1.5rem);
+      max-width: calc(25% - 1.5rem);
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      user-select: none;
+      text-align: center;
+    }
+
+    .item-lanzamiento:hover,
+    .item-lanzamiento:focus-within {
+      transform: scale(1.07);
+      z-index: 10;
+    }
+
+    /* Estilo para el enlace y su imagen con borde animado */
+    .item-lanzamiento a {
+      display: block;
+      position: relative;
+      border-radius: 18px;
+      overflow: visible;
+      padding: 8px; /* espacio para el borde animado */
+      background: transparent;
+      transition: filter 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 238, 255, 0.2);
+    }
+    .item-lanzamiento a:hover,
+    .item-lanzamiento a:focus {
+      filter: brightness(1.1);
+      box-shadow:
+        0 0 12px #00eaffcc,
+        0 0 25px #00eaff88,
+        0 0 40px #00eaff66;
+    }
+
+    /* Borde animado con gradiente para la imagen */
+    .item-lanzamiento img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 5px solid;
+      border-image-slice: 1;
+      border-width: 5px;
+      border-image-source: linear-gradient(45deg, #00eaff, #004466, #00eaff);
+      box-shadow:
+        0 0 15px #00eaff55,
+        0 0 30px #00eaff33 inset;
+      transition: box-shadow 0.3s ease, border-image-source 1.5s ease;
+      background-color: #000a12;
+    }
+
+    .item-lanzamiento img:hover {
+      box-shadow:
+        0 0 25px #00eaffaa,
+        0 0 50px #00eaffbb inset;
+      border-image-source: linear-gradient(90deg, #00ffff, #006699, #00ffff);
+    }
+.item-lanzamiento h3 {
+  margin-top: 0.6rem;
+  font-size: 1.3rem;
+  color: #ffffff; /* blanco brillante */
+  text-shadow: 0 0 8px #ffffffcc;
+  user-select: text;
+}
+
+    /* Botón paginación */
+    #btn-siguiente {
+      display: block;
+      margin: 3rem auto 0;
+      padding: 0.8rem 2.4rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      background-color: #00eaff;
+      color: #002233;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow:
+        0 0 25px #00eaffcc,
+        0 0 50px #00eaffbb;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    #btn-siguiente:hover,
+    #btn-siguiente:focus {
+      background-color: #008ea3;
+      box-shadow:
+        0 0 40px #00ffffdd,
+        0 0 70px #00ffffee;
+      outline: none;
+      color: #e0ffff;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .item-lanzamiento {
+        flex: 1 1 calc(50% - 1.5rem);
+        max-width: calc(50% - 1.5rem);
+      }
+    }
+    @media (max-width: 500px) {
+      .item-lanzamiento {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ATUCK</h1>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="bio.html">Biografía</a></li>
+        <li><a href="lanzamientos.html" aria-current="page">Lanzamientos</a></li>
+        <li><a href="conciertos.html">Conciertos</a></li>
+        <li><a href="batallas.html">Batallas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Nuevo Álbum</h2>
+    <p>Descubre el nuevo álbum completo de ATUCK y explora cada tema que lo compone.</p>
+
+    <!-- NUEVO LANZAMIENTO DESTACADO -->
+<!-- NUEVO LANZAMIENTO DESTACADO -->
+<section class="destacado-wrapper" aria-label="Nuevo lanzamiento destacado" style="max-width: 900px; margin: 3rem auto;">
+  <div class="destacado-flex" style="display: flex; align-items: center; gap: 2rem; background: rgba(0, 238, 255, 0.15); padding: 1.5rem; border-radius: 20px; box-shadow: 0 0 40px #00eaff88;">
+    <a href="nuevo-lanzamiento.html" style="flex-shrink: 0;">
+      <img src="../atuck-web/imagenes/channels4_profile.jpg" alt="Portada Nuevo Lanzamiento" style="width: 180px; border-radius: 16px; box-shadow: 0 0 30px #00eaffaa;" />
+    </a>
+    <div style="color: white; flex: 1;">
+      <h3 style="font-family: 'Bebas Neue', cursive; font-size: 2rem; margin: 0 0 0.6rem; color: #fff; text-shadow: 0 0 15px #00eaffbb;">PA ARRIBA</h3>
+      <p style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; line-height: 1.5; margin-bottom: 1rem;">
+        Escucha el nuevo álbum completo de ATUCK y mantente al día con lo mejor de su música. No te pierdas este trabajo que está dando que hablar.
+      </p>
+      <a href="nuevo-lanzamiento.html" style="display: inline-block; background: #00eaff; color: #000; padding: 0.6rem 1.2rem; border-radius: 20px; font-weight: 600; text-decoration: none; box-shadow: 0 0 15px #00eaffcc; transition: background-color 0.3s ease;">
+        Escuchar Ahora
+      </a>
+    </div>
+  </div>
+</section>
+
+
+    <section class="galeria-lanzamientos" aria-label="Galería de lanzamientos">
+      <!-- Aquí van los 20 lanzamientos -->
+      <article class="item-lanzamiento" data-index="0" style="display:none;">
+        <a href="lanzamiento1.html">
+          <img src="../atuck-web/imagenes/imagenatuck.png" alt="Portada Canción 1" />
+          <h3>NO PUEDO</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="1" style="display:none;">
+        <a href="lanzamiento2.html">
+          <img src="../atuck-web/imagenes/SUEÑOSROTOS.png" alt="Portada Canción 2" />
+          <h3>SUEÑOS ROTOS</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="2" style="display:none;">
+        <a href="lanzamiento3.html">
+          <img src="../atuck-web/imagenes/comofue.png" alt="Portada Canción 3" />
+          <h3>COMO FUE</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="3" style="display:none;">
+        <a href="lanzamiento4.html">
+          <img src="../atuck-web/imagenes/masquesangre.jpg" alt="Portada Canción 4" />
+          <h3>MAS QUE SANGRE</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="4" style="display:none;">
+        <a href="lanzamiento5.html">
+          <img src="../atuck-web/imagenes/noopineis.jpg" alt="Portada Canción 5" />
+          <h3>NO OPINEIS</h3>
+          <h4>PA ARRIBA</h4>
+
+
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="5" style="display:none;">
+        <a href="lanzamiento6.html">
+          <img src="../atuck-web/imagenes/METIENELOCO.JPG" alt="Portada Canción 6" />
+          <h3>ME TIENE LOCO</h3>
+          <h4>PA ARRIBA</h4>
+
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="6" style="display:none;">
+        <a href="lanzamiento7.html">
+          <img src="../atuck-web/imagenes/channels4_profile.jpg" alt="Portada Canción 7" />
+          <h3>MILLONARIA</h3>
+          <h4>PA ARRIBA</h4>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="7" style="display:none;">
+        <a href="lanzamiento8.html">
+          <img src="../atuck-web/imagenes/channels4_profile.jpg" alt="Portada Canción 8" />
+          <h3>I'M THE ONE</h3>
+          <h4>PA ARRIBA</h4>
+
+
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="8" style="display:none;">
+        <a href="lanzamiento9.html">
+          <img src="../atuck-web/imagenes/channels4_profile.jpg" alt="Portada Canción 9" />
+          <h3>DIMELO</h3>
+          <h4>PA ARRIBA</h4>
+
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="9" style="display:none;">
+        <a href="lanzamiento10.html">
+          <img src="../atuck-web/imagenes/channels4_profile.jpg" alt="Portada Canción 10" />
+          <h3>TAN LINDA</h3>
+          <h4>PA ARRIBA</h4>
+
+
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="10" style="display:none;">
+        <a href="lanzamiento11.html">
+          <img src="" alt="Portada Canción 11" />
+          <h3>Nombre Canción 11</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="11" style="display:none;">
+        <a href="lanzamiento12.html">
+          <img src="" alt="Portada Canción 12" />
+          <h3>Nombre Canción 12</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="12" style="display:none;">
+        <a href="lanzamiento13.html">
+          <img src="" alt="Portada Canción 13" />
+          <h3>Nombre Canción 13</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="13" style="display:none;">
+        <a href="lanzamiento14.html">
+          <img src="" alt="Portada Canción 14" />
+          <h3>Nombre Canción 14</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="14" style="display:none;">
+        <a href="lanzamiento15.html">
+          <img src="" alt="Portada Canción 15" />
+          <h3>Nombre Canción 15</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="15" style="display:none;">
+        <a href="lanzamiento16.html">
+          <img src="" alt="Portada Canción 16" />
+          <h3>Nombre Canción 16</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="16" style="display:none;">
+        <a href="lanzamiento17.html">
+          <img src="" alt="Portada Canción 17" />
+          <h3>Nombre Canción 17</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="17" style="display:none;">
+        <a href="lanzamiento18.html">
+          <img src="" alt="Portada Canción 18" />
+          <h3>Nombre Canción 18</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="18" style="display:none;">
+        <a href="lanzamiento19.html">
+          <img src="" alt="Portada Canción 19" />
+          <h3>Nombre Canción 19</h3>
+        </a>
+      </article>
+
+      <article class="item-lanzamiento" data-index="19" style="display:none;">
+        <a href="lanzamiento20.html">
+          <img src="" alt="Portada Canción 20" />
+          <h3>Nombre Canción 20</h3>
+        </a>
+      </article>
+    </section>
+
+    <button id="btn-siguiente" aria-label="Mostrar más lanzamientos">Siguiente</button>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://open.spotify.com/artist/30QXa9i6mPSZRGW6hwDjP8" target="_blank" rel="noopener noreferrer">🎧 Spotify</a>
+      <a href="https://music.apple.com/es/artist/atuck/1481720430" target="_blank" rel="noopener noreferrer">🍎 Apple Music</a>
+      <a href="https://www.youtube.com/@ATUCK28" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+      <a href="https://www.instagram.com/atuckreal?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+      <a href="https://www.tiktok.com/@atuck_music?_t=ZG-8t74WaRXu4X&_r=1" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+    </div>
+    <p>© 2025 ATUCK. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const items = document.querySelectorAll('.item-lanzamiento');
+    const btnSiguiente = document.getElementById('btn-siguiente');
+    const itemsPorPagina = 4;
+    let paginaActual = 0;
+
+    function mostrarPagina(pagina) {
+      const start = pagina * itemsPorPagina;
+      const end = start + itemsPorPagina;
+      items.forEach((item, i) => {
+        item.style.display = (i >= start && i < end) ? 'block' : 'none';
+      });
+      // Si es la última página ocultamos el botón
+      if (end >= items.length) {
+        btnSiguiente.style.display = 'none';
+      } else {
+        btnSiguiente.style.display = 'block';
+      }
+    }
+
+    btnSiguiente.addEventListener('click', () => {
+      paginaActual++;
+      mostrarPagina(paginaActual);
+    });
+
+    // Mostrar la primera página al cargar
+    mostrarPagina(paginaActual);
+  </script>
+</body>
+</html>

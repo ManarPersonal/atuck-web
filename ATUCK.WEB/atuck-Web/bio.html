@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATUCK - Biografía</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #000000 0%, #001f2e 100%);
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      color: #ffffff;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+    img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 40px #00eaff88;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 60px #00eaffaa;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: #00eaff;
+    }
+    .bio-section {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin: 5rem 0;
+      padding: 2rem;
+      border-radius: 30px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 50px #00eaff33;
+      overflow: hidden;
+      animation: fadeInUp 1s ease forwards;
+    }
+    .bio-section:nth-child(even) {
+      flex-direction: row-reverse;
+  <style>
+  .bio-text {
+    flex: 1 1 300px;  /* imagen más pequeña */
+    max-width: 350px;
+    padding: 1rem;
+    color: #fff;
+    text-shadow: 0 0 8px #00eaffcc; /* sombra luminosa azul */
+    border-bottom: 3px solid #00eaff; /* línea subrayada */
+    margin: auto;
+  }
+  .bio-text p {
+    font-size: 1.15rem;
+    text-align: justify;
+    line-height: 1.6;
+  }
+  .bio-image {
+    flex: 1 1 300px; /* imagen más pequeña */
+    max-width: 350px;
+    background: rgba(0, 234, 255, 0.1); /* fondo claro, sutil */
+    border-radius: 20px;
+    padding: 0.3rem;
+    box-shadow: 0 0 25px #00eaff44;
+    margin: auto;
+  }
+  .bio-image img {
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 0 30px #00eaffaa;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .bio-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px #00eaffcc;
+  }
+</style>
+
+    }
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+    .social-buttons a {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+      background-color: #00eaff;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00eaffaa;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    .social-buttons a:hover {
+      transform: scale(1.1);
+      background-color: #00c5cc;
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header style="padding: 1rem; text-align: center;">
+    <h1 style="color: #00eaff; font-family: 'Bebas Neue', cursive; font-size: 3rem; margin: 0;">ATUCK</h1>
+    <nav style="margin-top: 1rem;">
+      <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+        <li><a href="index.html" style="color: #00eaff; text-decoration: none;">Inicio</a></li>
+        <li><a href="bio.html" aria-current="page" style="color: #00eaff; text-decoration: none;">Biografía</a></li>
+        <li><a href="lanzamientos.html" style="color: #00eaff; text-decoration: none;">Lanzamientos</a></li>
+        <li><a href="conciertos.html" style="color: #00eaff; text-decoration: none;">Conciertos</a></li>
+        <li><a href="batallas.html" style="color: #00eaff; text-decoration: none;">Batallas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="max-width: 1200px; margin: 4rem auto; padding: 0 1rem;">
+    <h2 style="font-family: 'Bebas Neue', cursive; font-size: 3rem; color: #00eaff; text-align: center; text-shadow: 0 0 20px #00eaffaa; margin-bottom: 3rem;">
+      Biografía
+    </h2>
+
+    <!-- NUEVA INTRODUCCIÓN -->
+    <section class="bio-section">
+      <div class="bio-image">
+        <img src="../atuck-web/imagenes/IMG_1732.JPG" alt="Atuck presentación">
+      </div>
+      <div class="bio-text">
+        <p>
+          Jordi, conocido artísticamente como "Atuck", nació el 28 de septiembre de 2008 en Cassà de la Selva, Gerona. Proviene de una familia latinoamericana con raíces bolivianas y ha estado inmerso en la música desde su infancia. Inspirado por su hermano mayor, un apasionado del rap y las batallas de freestyle, Atuck se adentró en el mundo del hip-hop. Con el tiempo, mejoró sus habilidades y hoy en día, ha demostrado que sus letras portan mensajes profundos y significativos.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bloque 1 -->
+    <section class="bio-section">
+      <div class="bio-image">
+        <img src="../atuck-web/imagenes/IMG_1732.JPG" alt="Atuck presentándose">
+      </div>
+      <div class="bio-text">
+        <h3>La Promesa del Hip Hop</h3>
+        <p>
+          Atuck es una joven promesa emergente del hip hop que, con pasión y autenticidad, está dejando una marca imborrable en la escena musical de Girona. Con un estilo único que fusiona letras profundas, ritmos envolventes y una energía arrolladora, ha logrado conquistar a las nuevas generaciones y a los más puristas del género.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bloque 2 -->
+    <section class="bio-section">
+      <div class="bio-image">
+        <img src="../atuck-web/imagenes/IMG_5172.JPG" alt="Atuck en el escenario">
+      </div>
+      <div class="bio-text">
+        <h3>Una Historia que Conecta</h3>
+        <p>
+          Con letras cargadas de vivencias y emociones, Atuck se ha convertido en un narrador de su tiempo. Sus canciones son un reflejo de su realidad, conectando con una audiencia en constante crecimiento y consolidándose como un artista auténtico que no teme mostrar su lado más humano.
+        </p>
+      </div>
+    </section>
+
+    <!-- Bloque 3 -->
+    <section class="bio-section">
+      <div class="bio-image">
+        <img src="../atuck-web/imagenes/IMG_0757.JPG" alt="Atuck creando música">
+      </div>
+      <div class="bio-text">
+        <h3>El Futuro del Género</h3>
+        <p>
+          Atuck no solo representa el presente del hip hop, sino también su futuro. Con una propuesta fresca, innovadora y auténtica, promete dejar huella en la industria musical, llevando su música y su mensaje a nuevas fronteras.
+        </p>
+      </div>
+    </section>
+
+    <!-- Botones redes -->
+    <div class="social-buttons">
+      <a href="https://www.instagram.com/atuckreal?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+      <a href="https://www.tiktok.com/@atuck_music?_t=ZG-8t74WaRXu4X&_r=1" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+    </div>
+  </main>
+
+  <footer style="padding: 2rem 1rem;">
+    <p style="text-align: center; color: #ffffff;">© 2025 ATUCK. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

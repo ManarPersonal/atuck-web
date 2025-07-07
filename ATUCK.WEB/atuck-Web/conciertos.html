@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATUCK - Conciertos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    main {
+      background: linear-gradient(135deg, #001f3f, #004466);
+      padding: 2rem 1rem 4rem;
+      min-height: 100vh;
+      color: #d0e9ff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    main h2 {
+      text-align: center;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 3rem;
+      color: #00eaff;
+      text-shadow: 0 0 8px #00eaffaa;
+      margin-bottom: 3rem;
+    }
+
+    .concierto {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      background: rgba(0, 238, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #00eaff44;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .concierto iframe {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 16/9;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00eaff88;
+      border: none;
+      flex-shrink: 0;
+    }
+
+    .concierto-info {
+      flex: 1;
+      color: #ffffff;
+    }
+
+    .concierto-info h3 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2rem;
+      margin: 0 0 0.6rem;
+      color: #00eaff;
+      text-shadow: 0 0 12px #00eaffbb;
+    }
+
+    .concierto-info p {
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+      color: #d0e9ff;
+      text-shadow: 0 0 4px #004466bb;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .social-links a {
+      margin: 0 0.8rem;
+      color: #00eaff;
+      text-decoration: none;
+      font-size: 1.4rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover,
+    .social-links a:focus {
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffffaa;
+    }
+
+    footer p {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #a0cfff;
+    }
+
+    @media (max-width: 700px) {
+      .concierto {
+        flex-direction: column;
+        align-items: center;
+      }
+      .concierto iframe {
+        max-width: 100%;
+      }
+      .concierto-info {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ATUCK</h1>
+    <nav aria-label="Menú principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="bio.html">Biografía</a></li>
+        <li><a href="lanzamientos.html">Lanzamientos</a></li>
+        <li><a href="conciertos.html" aria-current="page">Conciertos</a></li>
+        <li><a href="batallas.html">Batallas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Conciertos en Vivo</h2>
+
+    <section class="concierto">
+      <iframe src="https://www.youtube.com/embed/8Q1aPx6hLfE" title="Concierto ATUCK en Barcelona" allowfullscreen></iframe>
+      <div class="concierto-info">
+        <h3>ATUCK en Barcelona</h3>
+        <p><strong>Fecha:</strong> 02 de junio 2025</p>
+        <p><strong>Lugar:</strong> Sala Apolo, Barcelona</p>
+        <p>Un concierto épico donde ATUCK presentó sus últimos éxitos con una energía increíble.</p>
+      </div>
+    </section>
+
+    <section class="concierto">
+      <iframe src="https://www.youtube.com/embed/TUCODIGODEVIDEO2" title="Concierto 2 de ATUCK" allowfullscreen></iframe>
+      <div class="concierto-info">
+        <h3>ATUCK en Madrid</h3>
+        <p><strong>Fecha:</strong> 02 de agosto 2025</p>
+        <p><strong>Lugar:</strong> WiZink Center, Madrid</p>
+        <p>Un show lleno de luces, invitados especiales y un público entregado.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://open.spotify.com/artist/30QXa9i6mPSZRGW6hwDjP8" target="_blank" rel="noopener noreferrer">🎧 Spotify</a>
+      <a href="https://music.apple.com/es/artist/atuck/1481720430" target="_blank" rel="noopener noreferrer">🍎 Apple Music</a>
+      <a href="https://www.youtube.com/@ATUCK28" target="_blank" rel="noopener noreferrer">▶️ YouTube</a>
+      <a href="https://www.instagram.com/atuckreal?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+      <a href="https://www.tiktok.com/@atuck_music?_t=ZG-8t74WaRXu4X&_r=1" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+    </div>
+    <p>© 2025 ATUCK. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

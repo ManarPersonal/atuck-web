@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATUCK - Como Fue</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+main {
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.contenedor-cancion {
+  max-width: 1100px;
+  background: rgba(15, 15, 30, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 24px;
+  box-shadow: 0 0 50px rgba(0, 238, 255, 0.25);
+  padding: 2rem;
+  animation: fadeIn 1s ease;
+}
+
+.contenido-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.portada-wrapper {
+  flex: 1 1 320px;
+  max-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 30px #00eaffaa, 0 0 60px #00eaff44;
+  transition: transform 0.5s ease;
+}
+
+.portada-wrapper:hover {
+  transform: scale(1.03) rotate(-1deg);
+}
+
+.imagen-portada {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  image-rendering: crisp-edges;
+  transition: filter 0.5s ease;
+}
+
+.imagen-portada:hover {
+  filter: brightness(1.2) contrast(1.1);
+}
+
+.info-wrapper {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente los hijos */
+  text-align: center;  /* centra el texto */
+  justify-content: center;
+}
+
+.titulo-cancion {
+  font-size: 3.5rem;
+  color: #00eaff;
+  letter-spacing: 3px;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 18px #00eaff, 0 0 40px #00eaff99;
+  animation: glow 2s infinite alternate;
+}
+
+.info-cancion p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0.8rem 0;
+  color: #ffffff;
+}
+
+.info-cancion strong {
+  color: #00eaff;
+}
+
+.info-cancion .descripcion {
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 12px #00eaff;
+  }
+  100% {
+    text-shadow: 0 0 25px #00eaff, 0 0 50px #00eaffaa;
+  }
+}
+
+@media (max-width: 800px) {
+  .contenido-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .titulo-cancion {
+    font-size: 2.5rem;
+  }
+  .info-cancion p {
+    font-size: 1rem;
+  }
+}
+
+.escuchar-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.escuchar-wrapper h3 {
+  font-size: 1.5rem;
+  color: #00eaff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #00eaffaa;
+}
+
+.escuchar-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.escuchar-links a {
+  text-decoration: none;
+  color: #00eaff;
+  background: rgba(0, 238, 255, 0.1);
+  border: 1px solid #00eaff;
+  padding: 0.6em 1.2em;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00eaff33;
+  backdrop-filter: blur(6px);
+}
+
+.escuchar-links a:hover {
+  background: #00eaff;
+  color: #000;
+  box-shadow: 0 0 20px #00eaffcc;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ATUCK</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="bio.html">Biografía</a></li>
+        <li><a href="lanzamientos.html">Lanzamientos</a></li>
+        <li><a href="conciertos.html">Conciertos</a></li>
+        <li><a href="batallas.html">Batallas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+  <section class="contenedor-cancion">
+    <div class="contenido-flex">
+      <div class="portada-wrapper">
+        <img src="imagenes/comofue.png" alt="Portada Como Fue" class="imagen-portada" />
+      </div>
+      <div class="info-wrapper">
+        <div class="escuchar-wrapper">
+          <h3>Escuchar en:</h3>
+          <div class="escuchar-links">
+            <a href="https://www.youtube.com/@ATUCK28" target="_blank" aria-label="Escuchar en YouTube">▶️ YouTube</a>
+            <a href="https://open.spotify.com/artist/30QXa9i6mPSZRGW6hwDjP8" target="_blank" aria-label="Escuchar en Spotify">🎧 Spotify</a>
+            <a href="https://music.apple.com/es/artist/atuck/1481720430" target="_blank" aria-label="Escuchar en Apple Music">🍎 Apple Music</a>
+          </div>
+        </div>
+
+        <h2 class="titulo-cancion">I'M THE ONE</h2>
+        <div class="info-cancion">
+          <p><strong>Artista:</strong> ATUCK</p>
+          <p><strong>Género:</strong>URBANO LATINO</p>
+          <p><strong>Duración:</strong> 2:46</p>
+          <p><strong>Fecha de lanzamiento:</strong> 8 de abril de 2025</p>
+          <p class="descripcion"><strong>Descripción:</strong> Una canción que explora la nostalgia de un amor que marcó. Letras intensas con bases electrónicas, reflejando la esencia de ATUCK con autenticidad y fuerza.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="social-links">
+    <a href="https://open.spotify.com/artist/30QXa9i6mPSZRGW6hwDjP8" target="_blank">🎧 Spotify</a>
+    <a href="https://music.apple.com/es/artist/atuck/1481720430" target="_blank">🍎 Apple Music</a>
+    <a href="https://www.youtube.com/@ATUCK28" target="_blank">▶️ YouTube</a>
+    <a href="https://www.instagram.com/atuckreal" target="_blank">📸 Instagram</a>
+    <a href="https://www.tiktok.com/@atuck_music" target="_blank">🎵 TikTok</a>
+  </div>
+  <p>© 2025 ATUCK. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
